@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Zilla+Slab" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="backgroundSquare"></div>
+        <div id="backgroundSquare2"></div>
+        <div id="socialIcons">
+            <a href="https://www.instagram.com/drewcarbungco/"><img id="instagram" src="002-instagram.png"></a>
+            <a href="https://www.linkedin.com/in/andrew-carbungco-1357ab22"><img id="linkedIn" src="004-linkedin.png"></a>
+            <a href="https://github.com/drewlearnsabout"><img id="github" src="005-cat.png"></a>
+        </div>
+        <div class="slideshowContainer">
+            <header id="homeSection" class="slides">
+                <div id="headerBackground"></div>
+                <h1>Andrew Carbungco</h1>
+                <h2>Designer. Developer. Creator.
+                    <span>
+                        <h3 id="slide1">Web Designer.</h3>
+                        <h3 id="slide2">Web Developer.</h3>
+                        <h3 id="slide3">Sourdough Baker.</h3>
+                        <h3 id="slide4">BBQ Enthusiast.</h3>
+                        <h3 id="slide5">Kombucha Fermenter.</h3>
+                        <h3 id="slide6">Astrophiliac.</h3>
+                    </span>
+                </h2>
+                <button id="formButton" alt="Icon for contact and sign form">Contact Me</button>
+                <img id="portrait" src="dc-91.png">
+                <form id="formSection" class="modal2" method="POST" data-netlify="true">
+                    <p>Contact me
+                        <br >andrew.carbungco@gmail.com
+                    </p>
+                    <input class="contact_me_class" id="name" name="name" type="text" placeholder="Name" required>
+                    <input class="contact_me_class" id="email" name="email" type="email" placeholder="Email" required>
+                    <input class="contact_me_class" id="addition" name="equation" type="number" placeholder="What's 1 + 2?" required>
+                    <textarea class="contact_me_class" id="comments" name="comments" placeholder="Add comments or inquiries" rows="2" cols="19"></textarea>
+                    <button class="contact_me_class" id="submit" type="submit">Submit</button>
+                    <span class="close">&times;</span>
+                </form>
+            </header>
+            <section id="aboutSection" class="slides">
+                <div id="statements">
+                    <div id="mission">
+                        <h3>What I offer</h3>
+                        <div>
+                            <img class="logos" id="laptop" src="Laptop Logo.png">
+                            <img class="logos" id="phone" src="Phone Logo.png">
+                        </div>
+                        <p>I make websites and landing pages for people.  Need one?  Let me know!</p>
+                    </div>
+                    <div id="story">
+                        <h3>Story</h3>
+                        <div>
+                            <img class="logos" id="sunglasses" src="sunglasses.png">
+                            <img class="logos" id="tree" src="tree.png">
+                        </div>
+                        <p>I'm a native San Diegan but live around Portland, Oregon! I'm a self-taught web developer & designer, creating websites and applications that could help others succeed in life.</p>
+                    </div>
+                    <div id="hobbies">
+                        <h3>Hobbies</h3>
+                        <div>
+                            <img class="logos" id="bread" src="Bread Icon 2.png">
+                            <img class="logos" id="kombucha" src="kombucha.png">
+                        </div>
+                        <p>I spend a lot of my free time as a mad scientist in the kitchen! My wife usually watches me make sourdough bread, foccacia or growing scoby's for kombucha.</p>
+                    </div>
+                    <div id="interests">
+                        <h3>Interests</h3>
+                        <div>
+                            <img class="logos" id="controller" src="controller.png">
+                            <img class="logos" id="space" src="space.png">
+                            <img class="logos" id="bbq" src="bbq.png">
+                        </div>
+                        <p>Space! Dungeons and Dragons! Video Games! BBQ! You name it, I probably have some interest in it. Let's hang out!</p>
+                    </div>
+                </div>
+                <div id="aboutBackground"></div>
+            </section>
+            <section id="portfolioSection" class="slides">
+                <h2>Portfolio</h2>
+                <div id="thumbnails">
+                    <a href="https://www.weejamminpdx.com/" target="_blank"><img class="thumbnailIcons" id="weeJammin" src="WeeJammin thumbnail.png"></a>
+                    <a href="https://example-podcast-landing-page.netlify.com/" target="_blank"><img class="thumbnailIcons" id="podcast" src="podcast.png"></a>
+                    <a href="https://sourdough-recipe.netlify.com/" target="_blank"><img class="thumbnailIcons" id="makingBread" src="Making Bread thumbnail.jpg"></a>
+                    <a href="https://www.aimhighimpact.org" target="_blank"><img class="thumbnailIcons" id="impact" src="Impact home page.png"></a>
+                    <a href="https://example-bakery-landing-page.netlify.com" target="_blank"><img class="thumbnailIcons" id="bakery" src="Bakery Page thumbnail.png"></a>
+                </div>
+            </section>
+            <section id="fermentationProjectSection" class="slides">
+                <h3>The Fermentation Project</h3>
+                <p>Website coming soon!</p>
+            </section>
+
+              <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <nav id="navbar" class="nav">
+            <div>
+                <p class="navButtons" onclick="currentSlide(1)">Home</p>
+                <p class="navButtons" onclick="currentSlide(2)">About Andrew</p>
+                <p class="navButtons" onclick="currentSlide(3)">Web Projects</p>
+                <p class="navButtons" onclick="currentSlide(4)">Project: Fermentation</p>
+            </div>
+            <p href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="hamburger button.png" class="icon"
+                alt="Navigation Button"></p>
+        </nav>
+
+        <footer>
+            <div method="POST" data-netlify="true">
+                <p>Interested in what I do? Sign up!</p>
+                <input class="signUp" id="email" name="email" type="email" placeholder="Email">
+                <input id="submit" type="submit"></input>
+            </div>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>

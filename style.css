@@ -1,0 +1,906 @@
+html {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Zilla Slab', serif;
+}
+
+#backgroundSquare {
+    height: 80vh;
+    width: 50vw;
+    background: #2e617a;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#backgroundSquare2 {
+    height: 40vh;
+    width: 10vw;
+    background: #2e617a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#socialIcons {
+    position: absolute;
+    top: 10;
+    right: 10;
+    display: grid;
+    grid-gap: 1.5em 0;
+    animation-name: fadeLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 4;
+    cursor: pointer;
+}
+
+#socialIcons img {
+    transform: scale(0.7);
+    border-radius: 2em;
+}
+
+#socialIcons img:hover {
+    transform: scale(0.75) translate(0, -5px);
+    transition-duration: 0.5s;
+    background: rgb(255, 196, 0);
+    border-radius: 2em;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+}
+
+header h1, h2, button {
+    font-weight: lighter;
+    position: absolute;
+    z-index: 2;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+
+header h1 {
+    top: 140;
+    left: 24%;
+    font-size: 3.5em;
+    animation-name: fadeUp;
+    font-family: 'Abril Fatface', cursive;
+}
+
+header h2 {
+    top: 260;
+    left: 24%;
+    font-size: 1.5em;
+    animation-name: fadeUp2;
+    font-family: 'Zilla Slab', serif;
+}
+
+header h3 {
+    font-family: 'Zilla Slab', serif;
+    font-size: 0.89em;
+    font-weight: lighter;
+    position: absolute;
+    transform: translate(310px, -48.4px);
+}
+
+#slide1, #slide2, #slide3, #slide4, #slide5, #slide6 {
+    animation-delay: -2.3s;
+    animation-duration: 27s;
+    animation-iteration-count: infinite;
+}
+
+#slide1 {
+    animation-name: fade;
+}
+#slide2 {
+    animation-name: fade2;
+}
+#slide3 {
+    animation-name: fade3;
+}
+#slide4 {
+    animation-name: fade4;
+}
+#slide5 {
+    animation-name: fade5;
+}
+#slide6 {
+    animation-name: fade6;
+}
+
+#portrait {
+    width: 320px;
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    right: 270;
+    animation-name: fadeRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 3;
+}
+
+#formButton {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1.5px solid rgb(255, 196, 0);
+    padding: 0.7em;
+    color: rgb(255, 196, 0);
+    position: absolute;
+    top: 350;
+    left: 24%;
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.2em;
+    border-radius: 0.4em;
+    animation-name: fadeUp3;
+    box-shadow: 2px 2px 2px black;
+}
+
+#formButton:hover {
+    cursor: pointer;
+    color: rgb(33, 143, 206);
+    text-shadow: 1px 1px 2px gray;
+    transition-duration: 0.5s;
+}
+
+#formSection {
+    color: white;
+    display: none;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    grid-gap: 1.5em;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+#formSection button {
+    transform: translate(-1em, 22em);
+}
+
+#formSection button:hover {
+    color: orange;
+    background: rgb(33, 143, 206);
+    transition: 0.7s;
+}
+
+#formSection span {
+    position: relative;
+    transform: translate(5em, -9em);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#formSection span:hover {
+    color: orange;
+}
+
+#headerBackground {
+    width: 62vw;
+    height: 70vh;
+    top: 12%;
+    left: 20%;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(177,177,177,1) 3%, rgba(255,255,255,1) 49%);
+    z-index: 2;
+}
+
+#aboutSection {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 20%;
+    left: 18%;
+    z-index: 3;
+}
+
+#statements {
+    color: white;
+    text-shadow: 1px 1px 1px rgb(202, 202, 202);
+    display: grid;
+    grid-template-columns: repeat(4, 12em);
+    justify-items: center;
+    text-align: center;
+    padding: 0.5em 0 0 0.5em;
+    grid-gap: 0.5em 3.5em;
+}
+
+#statements h3 {
+    font-weight: lighter;
+    font-size: 2.3em;
+}
+
+#statements p {
+    font-size: 1.2em;
+}
+
+.logos {
+    width: 3em;
+    height: 3em;
+}
+
+#laptop {
+    height: 4em;
+    width: 4em;
+    transform: translate(10px, 0);
+}
+
+#phone {
+    height: 2.3em;
+    width: 1.5em;
+    transform: translate(-18px, -30px) rotate(10deg);
+}
+
+#kombucha {
+    width: 2em;
+    height: 2.7em;
+    transform: translate(-55px, 5px);
+    position: relative;
+}
+
+#bread {
+    width: 4em;
+    height: 4em;
+    transform: translate(20px, 0)
+}
+
+#sunglasses {
+    height: 1.5em;
+    width: 2.5em;
+    position: relative;
+    transform: translate(40px, -35px) rotate(-10deg);
+    z-index: 3;
+}
+
+#tree {
+    height: 4.5em;
+    width: 4.5em;
+    transform: translate(-20px, 0);
+    position: relative;
+}
+
+#space {
+    height: 4.5em;
+    width: 4.5em;
+    transform: translate(0, -7px);
+}
+
+#controller {
+    transform: translate(18px, -25px) rotate(-10deg);
+    position: relative;
+    z-index: 3;
+}
+
+#bbq {
+    height: 4em;
+    width: 4em;
+    transform: translate(-25px, -11px) rotate(15deg);
+}
+
+#mission {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    color: rgb(33, 143, 206);
+}
+
+#story { 
+    animation-name: fadeIn2;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    color: rgb(33, 143, 206);
+}
+
+#hobbies {
+    animation-name: fadeIn3;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+#interests {
+    animation-name: fadeIn4;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#portfolioSection {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+}
+
+#portfolioSection h2 {
+    width: 100%;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px rgb(54, 54, 54);
+    text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+#portfolioSection img {
+    transform: translate(4em, 4em);
+    width: 320px;
+    height: 170px;
+    cursor: pointer;
+    box-shadow: 3px 3px 4px rgb(61, 61, 61);
+}
+
+#thumbnails {
+    width: 100%;
+    position: absolute;
+    left: 5%;
+    top: 24%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-gap: 1em 0;
+}
+
+#weeJammin {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#podcast {
+    animation-name: fadeIn2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#makingBread {
+    animation-name: fadeIn3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#impact {
+    animation-name: fadeIn4;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#bakery {
+    animation-name: fadeIn5;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#fermentationProjectSection {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    z-index: 10;
+  }
+  
+  /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+    background-color: rgba(82, 82, 82, 0.356);
+  }
+
+nav {
+    position: fixed;
+    padding-left: 1em;
+    top: 0;
+    left: 0;
+    animation-name: fadeRight2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+
+nav p:hover {
+    cursor: pointer;
+    color: rgb(33, 143, 206);
+    font-weight: bold;
+    text-shadow: 1px 1px 1px white, 1px 1px 2px gray;
+}
+
+footer {
+    font-family: 'Zilla Slab', serif;
+    width: 39%;
+    background: rgb(253, 186, 0);
+    box-shadow: 2px 2px 2px gray;
+    position: absolute;
+    bottom: 8;
+    left: 5;
+    z-index: 10;
+    border-radius: 1em;
+    animation-name: fadeRight3;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+footer div {
+    color: white;
+    text-shadow: 2px 2px 2px gray;
+    padding: 0.5em 0 0.5em 1em;
+    display: grid;
+    grid-template-columns: 15em 15em 5em;
+}
+
+.signUp {
+    padding-left: 1em;
+    border-radius: 1em;
+}
+
+#submit {
+    border-radius: 1em;
+    margin-left: 1.6em;
+    font-family: 'Zilla Slab', serif;
+
+}
+
+#navbar img {
+    display: none;
+    height: 1em;
+    width: 1em;
+}
+
+
+@media (max-width: 800px) {
+    body {
+        max-width: 40vw;
+        max-height: 100vh;
+    }
+    
+    header h1 {
+        top: 14%;
+        left: 12%;
+        font-size: 1.5em;
+        padding-left: 1em;
+        z-index: 4;
+    }
+    
+    header h2 {
+        top: 22%;
+        left: 18%;
+        font-size: 0.8em;
+    }
+    
+    header h3 {
+        font-size: 1em;
+        transform: translate(0, -10%);
+    }
+
+    #formButton {
+        top: 33%;
+        left: 17%;
+        padding: 0.5em;
+        font-size: 0.6em;
+    }
+
+    #portrait {
+        height: 18vh;
+        width: 15vw;
+        top: 22%;
+        left: 62%;
+    }
+
+    #headerBackground {
+        width: 50vw;
+        height: 50vh;
+        top: 0;
+        left: 20%;
+    }
+
+    nav {
+        font-size: 0.9em;
+        overflow: visible;
+    }
+
+    .navButtons {
+        display: none;
+    }
+
+    #navbar img {
+        display: initial;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive p.icon {
+        position: absolute;
+        display: grid;
+        top: 0;
+    }
+    .topnav.responsive p {
+        display: grid;
+        padding: 0.5em;
+        top: 0;
+    }
+
+    #socialIcons {
+        top: 0;
+        right: 0;
+        grid-gap: 0;
+        z-index: 4;
+    }
+    
+    #socialIcons img {
+        transform: scale(0.5);
+        border-radius: 2em;
+    }
+
+    #backgroundSquare {
+        height: 30vh;
+        width: 25vw;
+        top: 0;
+        right: 0%;
+    }
+
+    #backgroundSquare2 {
+        height: 20vh;
+        width: 30vw;
+        bottom: 50%;
+        left: 0;
+    }
+
+    .prev, .next {
+        display: none;
+    }
+
+    .next {
+        right: 35%;
+    }
+
+    footer {
+        width: 27%;
+        font-size: 0.5em;
+        bottom: 20%;
+    }
+
+    footer div {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .signUp {
+        padding-left: 1em;
+        border-radius: 1em;
+        width: 24vw; /* fix this <=== */
+    }
+    
+    #submit {
+        border-radius: 1em;
+        margin: 10 0 0 20;
+        width: 15vw;
+    }
+
+    #formSection {
+        left: -7;
+    }
+
+    #formSection button {
+        transform: translate(-5px, 270px);
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        transform: translate(100px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        transform: translate(-100px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRight2 {
+    0% {
+        transform: translate(-100px, 0);
+        opacity: 0;
+    }
+    20% {
+        transform: translate(-100px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRight3 {
+    0% {
+        transform: translate(-200px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translate(0, 100px);
+        opacity: 0;
+    }
+    15% {
+        transform: translate(0, 100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp2 {
+    0% {
+        transform: translate(0, 100px);
+        opacity: 0;
+    }
+    30% {
+        transform: translate(0, 100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp3 {
+    0% {
+        transform: translate(0, 100px);
+        opacity: 0;
+    }
+    45% {
+        transform: translate(0, 100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    15% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes fadeIn3 {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    30% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes fadeIn4 {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    45% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes fadeIn5 {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    60% {
+        opacity: 0;
+        transform: translate(0px, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    16.66% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    49.99% {
+        opacity: 0;
+    }
+    66.65% {
+        opacity: 0;
+    }
+    83.31% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade2 {
+    0% {
+        opacity: 0;
+    }
+    16.66% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    49.99% {
+        opacity: 0;
+    }
+    66.65% {
+        opacity: 0;
+    }
+    83.31% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade3 {
+    0% {
+        opacity: 0;
+    }
+    16.66% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    49.99% {
+        opacity: 0;
+    }
+    66.65% {
+        opacity: 0;
+    }
+    83.31% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade4 {
+    0% {
+        opacity: 0;
+    }
+    16.66% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    49.99% {
+        opacity: 1;
+    }
+    66.65% {
+        opacity: 0;
+    }
+    83.31% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade5 {
+    0% {
+        opacity: 0;
+    }
+    16.66% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    49.99% {
+        opacity: 0;
+    }
+    66.65% {
+        opacity: 1;
+    }
+    83.31% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade6 {
+    0% {
+        opacity: 0;
+    }
+    16.66% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    49.99% {
+        opacity: 0;
+    }
+    66.65% {
+        opacity: 0;
+    }
+    83.31% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
