@@ -479,7 +479,7 @@ footer div {
     
     header h1 {
         top: 14%;
-        left: -5%;
+        left: -2%;
         font-size: 1.5em;
         padding-left: 1em;
         z-index: 4;
@@ -501,7 +501,7 @@ footer div {
         top: 39%;
         left: 5%;
         padding: 0.5em;
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
     #portrait {
@@ -513,13 +513,15 @@ footer div {
     }
 
     nav {
-        font-size: 0.8em;
+        font-size: 1.2em;
         overflow: visible;
+        
     }
 
     nav a img {
         position: relative;
-        top: 8;
+        top: 14;
+        font-size: 1.5em;
     }
 
     .navButtons {
@@ -532,6 +534,10 @@ footer div {
 
     .nav.responsive {
         position: relative;
+        padding-bottom: 0.8em;
+        animation-duration: 1s;
+        animation-name: backIn;
+        animation-fill-mode: forwards;
     }
     .nav.responsive a.icon {
         position: absolute;
@@ -543,7 +549,7 @@ footer div {
         padding: 0.5em 0 0.5em 0;
         position: relative;
         left: -7;
-        top: 13;
+        top: 20;
         animation-name: fadeDown;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -568,7 +574,7 @@ footer div {
 
     #backgroundSquare {
         height: 100vh;
-        width: 25vw;
+        width: 18vw;
         top: 0;
         right: 0%;
     }
@@ -627,20 +633,23 @@ footer div {
     }
 
     #statements {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 30% 30%;
     }
 
     #statements h3 {
-        font-size: 1.3em;
+        font-size: 1.2em;
+        color: black;
     }
     
     #statements p {
         font-size: 0.7em;
+        color: black;
     }
 
     #laptop {
         height: 2em;
         width: 2em;
+
     }
     
     #phone {
@@ -664,22 +673,23 @@ footer div {
     }
     
     #tree {
+        height: 1.8em;
+        width: 1.8em;
+    }
+    
+    #space {
         height: 2.5em;
         width: 2.5em;
     }
     
-    #space {
-        height: 4.5em;
-        width: 4.5em;
-    }
-    
     #controller {
         height: 1em;
+        width: 1em;
     }
     
     #bbq {
-        height: 4em;
-        width: 4em;
+        height: 2em;
+        width: 2em;
     }
 }
 
@@ -991,5 +1001,14 @@ footer div {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes backIn {
+    0% {
+        background: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0.2);
     }
 }
