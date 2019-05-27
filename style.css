@@ -479,7 +479,7 @@ footer div {
     
     header h1 {
         top: 14%;
-        left: -10%;
+        left: -5%;
         font-size: 1.5em;
         padding-left: 1em;
         z-index: 4;
@@ -488,7 +488,7 @@ footer div {
     
     header h2 {
         top: 28%;
-        left: 0;
+        left: 5%;
         font-size: 0.8em;
     }
     
@@ -499,7 +499,7 @@ footer div {
 
     #formButton {
         top: 39%;
-        left: 0%;
+        left: 5%;
         padding: 0.5em;
         font-size: 0.6em;
     }
