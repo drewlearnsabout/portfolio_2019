@@ -47,9 +47,9 @@ function showSlides(n) {
 
 function myFunction() {
     var x = document.getElementById("navbar");
-    if (x.className === "topnav") {
+    if (x.className === "nav") {
         x.className += " responsive";
     } else {
-        x.className = "topnav";
+        x.className = "nav";
     }
 }

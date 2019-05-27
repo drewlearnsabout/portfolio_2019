@@ -112,11 +112,11 @@ header h3 {
 }
 
 #portrait {
-    width: 320px;
-    height: 90vh;
+    width: 285px;
+    height: 555px;
     position: absolute;
     bottom: 0;
-    right: 270;
+    right: 238;
     animation-name: fadeRight;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -471,18 +471,24 @@ footer div {
         max-width: 40vw;
         max-height: 100vh;
     }
+
+    header {
+        position: relative;
+        left: 0;
+    }
     
     header h1 {
         top: 14%;
-        left: 12%;
+        left: -10%;
         font-size: 1.5em;
         padding-left: 1em;
         z-index: 4;
+        max-width: 70px;
     }
     
     header h2 {
-        top: 22%;
-        left: 18%;
+        top: 28%;
+        left: 0;
         font-size: 0.8em;
     }
     
@@ -492,29 +498,28 @@ footer div {
     }
 
     #formButton {
-        top: 33%;
-        left: 17%;
+        top: 39%;
+        left: 0%;
         padding: 0.5em;
         font-size: 0.6em;
     }
 
     #portrait {
-        height: 18vh;
-        width: 15vw;
-        top: 22%;
-        left: 62%;
+        display: none;
     }
 
     #headerBackground {
-        width: 50vw;
-        height: 50vh;
-        top: 0;
-        left: 20%;
+        display: none;
     }
 
     nav {
-        font-size: 0.9em;
+        font-size: 0.8em;
         overflow: visible;
+    }
+
+    nav a img {
+        position: relative;
+        top: 8;
     }
 
     .navButtons {
@@ -525,18 +530,28 @@ footer div {
         display: initial;
     }
 
-    .topnav.responsive {
+    .nav.responsive {
         position: relative;
     }
-    .topnav.responsive p.icon {
+    .nav.responsive a.icon {
         position: absolute;
         display: grid;
         top: 0;
     }
-    .topnav.responsive p {
+    .nav.responsive p {
         display: grid;
-        padding: 0.5em;
-        top: 0;
+        padding: 0.5em 0 0.5em 0;
+        position: relative;
+        left: -7;
+        top: 13;
+        animation-name: fadeDown;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .nav.responsive a img {
+        top: -5;
+        left: -8;
     }
 
     #socialIcons {
@@ -552,7 +567,7 @@ footer div {
     }
 
     #backgroundSquare {
-        height: 30vh;
+        height: 100vh;
         width: 25vw;
         top: 0;
         right: 0%;
@@ -563,37 +578,39 @@ footer div {
         width: 30vw;
         bottom: 50%;
         left: 0;
-    }
-
-    .prev, .next {
         display: none;
     }
 
+    .prev, .next {
+        display: initial;
+    }
+
     .next {
-        right: 35%;
+        right: 0%;
     }
 
     footer {
-        width: 27%;
-        font-size: 0.5em;
-        bottom: 20%;
+        width: 100vw;
+        font-size: 0.7em;
+        bottom: 0%;
+        left: 0;
+        border-radius: 0;
     }
 
     footer div {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .signUp {
         padding-left: 1em;
         border-radius: 1em;
-        width: 24vw; /* fix this <=== */
+        width: 90%; /* fix this <=== */
     }
     
     #submit {
-        border-radius: 1em;
-        margin: 10 0 0 20;
-        width: 15vw;
+        border-radius: 0.2em;
+        margin: 0.5em 0 0 0;
+        width: 70px;
     }
 
     #formSection {
@@ -602,6 +619,67 @@ footer div {
 
     #formSection button {
         transform: translate(-5px, 270px);
+    }
+
+    #aboutSection {
+        top:0;
+        justify-content: center;
+    }
+
+    #statements {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #statements h3 {
+        font-size: 1.3em;
+    }
+    
+    #statements p {
+        font-size: 0.7em;
+    }
+
+    #laptop {
+        height: 2em;
+        width: 2em;
+    }
+    
+    #phone {
+        height: 1em;
+        width: 0.8em;
+    }
+    
+    #kombucha {
+        width: 1em;
+        height: 1.7em;
+    }
+    
+    #bread {
+        width: 2em;
+        height: 2em;
+    }
+    
+    #sunglasses {
+        height: 0.5em;
+        width: 1.5em;
+    }
+    
+    #tree {
+        height: 2.5em;
+        width: 2.5em;
+    }
+    
+    #space {
+        height: 4.5em;
+        width: 4.5em;
+    }
+    
+    #controller {
+        height: 1em;
+    }
+    
+    #bbq {
+        height: 4em;
+        width: 4em;
     }
 }
 
@@ -902,5 +980,16 @@ footer div {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
