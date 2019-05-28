@@ -506,6 +506,11 @@ footer div {
 
     #portrait {
         display: none;
+        position: relative;
+        left: 140;
+        top: 240;
+        height: 320px;
+        width: 175px;
     }
 
     #headerBackground {
@@ -513,7 +518,7 @@ footer div {
     }
 
     nav {
-        font-size: 1.2em;
+        font-size: 1em;
         overflow: visible;
         
     }
@@ -526,6 +531,8 @@ footer div {
 
     .navButtons {
         display: none;
+        color: rgb(0, 150, 196);
+        text-shadow: 2px 2px 2px rgb(204, 204, 204);
     }
 
     #navbar img {
@@ -534,7 +541,7 @@ footer div {
 
     .nav.responsive {
         position: relative;
-        padding-bottom: 0.8em;
+        padding-bottom: 1em;
         animation-duration: 1s;
         animation-name: backIn;
         animation-fill-mode: forwards;
@@ -549,7 +556,7 @@ footer div {
         padding: 0.5em 0 0.5em 0;
         position: relative;
         left: -7;
-        top: 20;
+        top: 30;
         animation-name: fadeDown;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -610,13 +617,13 @@ footer div {
     .signUp {
         padding-left: 1em;
         border-radius: 1em;
-        width: 90%; /* fix this <=== */
+        width: 90%;
     }
     
     #submit {
         border-radius: 0.2em;
         margin: 0.5em 0 0 0;
-        width: 70px;
+        width: 80%;
     }
 
     #formSection {
@@ -628,12 +635,14 @@ footer div {
     }
 
     #aboutSection {
-        top:0;
+        top: 0;
+        left: 25;
         justify-content: center;
     }
 
     #statements {
-        grid-template-columns: 30% 30%;
+        grid-template-columns: 35% 40%;
+        grid-gap: 0 0.5em;
     }
 
     #statements h3 {
@@ -647,19 +656,21 @@ footer div {
     }
 
     #laptop {
-        height: 2em;
-        width: 2em;
+        height: 1.8em;
+        width: 1.8em;
 
     }
     
     #phone {
         height: 1em;
         width: 0.8em;
+        transform: translate(0, -15px) rotate(15deg);
     }
     
     #kombucha {
         width: 1em;
         height: 1.7em;
+        transform: translate(-27px, 0);
     }
     
     #bread {
@@ -670,11 +681,13 @@ footer div {
     #sunglasses {
         height: 0.5em;
         width: 1.5em;
+        transform: translate(14px, -15px) rotate(-8deg);
     }
     
     #tree {
         height: 1.8em;
         width: 1.8em;
+        transform: translate(-15px,-0);
     }
     
     #space {
@@ -690,6 +703,24 @@ footer div {
     #bbq {
         height: 2em;
         width: 2em;
+    }
+
+    #portfolioSection img {
+        width: 130px;
+        height: 70px;
+    }
+
+    #thumbnails {
+        grid-template-columns: 140px 140px;
+        grid-gap: 1em 1em;
+    }
+
+    #fermentationProjectSection {
+        left: 25;
+    }
+
+    #formSection .close {
+        transform: translate(120px, -290px);
     }
 }
 
@@ -1009,6 +1040,6 @@ footer div {
         background: rgba(0, 0, 0, 0);
     }
     100% {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(34, 34, 34, 0.24);
     }
 }
