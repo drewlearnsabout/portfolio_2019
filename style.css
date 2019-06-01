@@ -534,7 +534,7 @@ footer div {
     }
 
     #navbar img {
-        display: initial;
+        display: none;
     }
 
     .nav.responsive {
